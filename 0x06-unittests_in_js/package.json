@@ -8,7 +8,7 @@
     "check-lint": "lint [0-9]*.js",
     "lint-all": "./node_modules/.bin/eslint [0-9]*.js",
     "lint-fix-all": "./node_modules/.bin/eslint --fix [0-9]*.js",
-    "test": "jest",
+    "test": "node ./node_modules/mocha/bin/mocha",
     "dev": "nodemon --exec babel-node --presets babel-preset-env ./server.js ./database.csv"
   },
   "author": "",
@@ -18,11 +18,11 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.24.7",
     "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
-    "babel-cli": "^6.26.0",
+    "@babel/register": "^7.24.6",
     "babel-jest": "^29.7.0",
-    "babel-preset-env": "^1.7.0",
     "chai": "^5.1.1",
     "eslint": "^8.57.0",
     "eslint-plugin-jest": "^28.5.0",
